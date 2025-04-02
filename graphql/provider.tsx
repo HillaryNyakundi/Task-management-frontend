@@ -10,7 +10,7 @@ import {
 export const Provider = ({ children }: { children: ReactNode }) => {
   const client = new ApolloClient({
     link: createHttpLink({
-      uri: process.env.NEXT_PUBLIC_BACKEND_URL + '/graphql',
+      uri: process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT,
       credentials: 'include',
     }),
     cache: new InMemoryCache(),
